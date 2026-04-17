@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Golden Spoon</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HERO SECTION -->
+<section class="hero">
+  <div class="overlay">
+    <h1>The Golden Spoon</h1>
+    <p class="tagline">Where Taste Meets Elegance</p>
+  </div>
+</section>
+
+<!-- OFFERS -->
+<div class="offers">
+  <h3>🔥 Today’s Deal</h3>
+  <p>Flat 20% OFF on all Main Course items!</p>
+
+  <h3>🍽 Special Offer</h3>
+  <p>Buy 1 Get 1 Free on selected starters</p>
+</div>
+  
+<!-- MENU -->
+<section class="menu">
+
+  <!-- STARTERS -->
+  <h2>Starters</h2>
+  <div class="category">
+    <h3>Veg</h3>
+    <div class="items" id="veg-starters"></div>
+
+    <h3>Non-Veg</h3>
+    <div class="items" id="nonveg-starters"></div>
+  </div>
+
+  <!-- MAIN COURSE -->
+  <h2>Main Course</h2>
+  <div class="category">
+    <h3>Veg</h3>
+    <div class="items" id="veg-main"></div>
+
+    <h3>Non-Veg</h3>
+    <div class="items" id="nonveg-main"></div>
+  </div>
+
+  <!-- DESSERTS -->
+  <h2>Desserts</h2>
+  <div class="category">
+    <div class="items" id="desserts"></div>
+  </div>
+
+</section>
+
+<!-- ORDER BUTTON -->
+<div class="order-section">
+  <button onclick="showOrder()">Order Now</button>
+</div>
+
+<!-- ORDER PANEL -->
+<div class="order-panel" id="orderPanel">
+  <h2>Your Order</h2>
+  <div id="cartItems"></div>
+  <p id="total">Total: ₹0</p>
+  <input type="number" id="tableNumber">
+  <button onclick="placeOrder()">Place Order</button>
+</div>
+
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<script src="{% static 'script.js' %}"></script>
+</body>
+</html>
